@@ -1,0 +1,1125 @@
+<!Doctype html>
+<html lang="ar" dir="rtl"><head>
+  <meta charset="UTF-8">
+  <title>شرح دروس HTML</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+      line-height: 1.8;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      color: #0d47a1;
+      text-align: center;
+    }
+    h2 {
+      color: #1565c0;
+      margin-top: 40px;
+direction : ltr ;
+    }
+    pre {
+      background-color: #eeeeee;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      direction: ltr;
+    }
+    .lesson {
+      background: #ffffff;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+a{
+   color: #1565c0;
+text-decoration:none;
+}
+a:hover{
+   color: #9335c0;
+text-decoration:none;
+}
+
+    iframe.output {
+      width: 100%;
+      height: 200px;
+      border: 1px solid #ccc;
+      margin-top: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="contents">
+  <ul dir="ltr">
+    <li><a href="#lesson-1">Lesson 1: Why HTML?</a></li>
+    <li><a href="#lesson-2">Lesson 2: How Browser Reads HTML?</a></li>
+    <li><a href="#lesson-3">Lesson 3: First HTML Project</a></li>
+    <li><a href="#lesson-4">Lesson 4: Page Structure</a></li>
+    <li><a href="#lesson-5">Lesson 5: Comments in HTML</a></li>
+    <li><a href="#lesson-6">Lesson 6: Headings</a></li>
+    <li><a href="#lesson-7">Lesson 7: Paragraphs</a></li>
+    <li><a href="#lesson-8">Lesson 8: Line Break &amp; Horizontal Rule</a></li>
+    <li><a href="#lesson-9">Lesson 9: HTML Attributes</a></li>
+    <li><a href="#lesson-10">Lesson 10: Lists</a></li>
+    <li><a href="#lesson-11">Lesson 11: Links</a></li>
+    <li><a href="#lesson-12">Lesson 12: Images</a></li>
+    <li><a href="#lesson-13">Lesson 13: Tables</a></li>
+    <li><a href="#lesson-14">Lesson 14: Special Characters</a></li>
+    <li><a href="#lesson-15">Lesson 15: Text Formatting</a></li>
+    <li><a href="#lesson-16">Lesson 16: div and span</a></li>
+    <li><a href="#lesson-17">Lesson 17: Empty Elements</a></li>
+    <li><a href="#lesson-18">Lesson 18: Button Element</a></li>
+    <li><a href="#lesson-19">Lesson 19: HTML Comments</a></li>
+    <li><a href="#lesson-20">Lesson 20: Full Review</a></li>
+    <li><a href="#lesson-21">Lesson 21: Nested Elements</a></li>
+    <li><a href="#lesson-22">Lesson 22: Code Indentation</a></li>
+    <li><a href="#lesson-23">Lesson 23: Internal &amp; External Links</a></li>
+    <li><a href="#lesson-24">Lesson 24: Mail &amp; Phone Links</a></li>
+    <li><a href="#lesson-25">Lesson 25: Image as Link</a></li>
+    <li><a href="#lesson-26">Lesson 26: Button Inside Link</a></li>
+    <li><a href="#lesson-27">Lesson 27: Image Width &amp; Height</a></li>
+    <li><a href="#lesson-28">Lesson 28: Images from Internet</a></li>
+    <li><a href="#lesson-29">Lesson 29: Image Alt Text</a></li>
+    <li><a href="#lesson-30">Lesson 30: HTML Entities</a></li>
+    <li><a href="#lesson-31">Lesson 31: HTML Video</a></li>
+    <li><a href="#lesson-32">Lesson 32: HTML Audio</a></li>
+    <li><a href="#lesson-33">Lesson 33: iframe</a></li>
+    <li><a href="#lesson-34">Lesson 34: HTML Forms</a></li>
+    <li><a href="#lesson-35">Lesson 35: Input Types</a></li>
+    <li><a href="#lesson-36">Lesson 36: Radio &amp; Checkbox</a></li>
+    <li><a href="#lesson-37">Lesson 37: Select Menu</a></li>
+    <li><a href="#lesson-38">Lesson 38: Textarea</a></li>
+    <li><a href="#lesson-39">Lesson 39: HTML5 Semantic Tags</a></li>
+    <li><a href="#lesson-40">Lesson 40: End of Part One</a></li>
+  </ul>
+</div>
+  
+
+<div class="lesson">
+  <h2 id="lesson-1">Lesson 1: Why HTML?</h2>
+  <p>HTML هي الأساس اللي بيتبني عليه أي موقع على الإنترنت. بتستخدم علشان:</p>
+  <ul>
+    <li>ترتيب وتنظيم عناصر الصفحة (عناوين، فقرات، صور...)</li>
+    <li>المتصفح بيقرأ كود HTML ويعرضه للمستخدم</li>
+  </ul>
+  <p>HTML مش لغة برمجة، دي لغة وصف وهيكلة للمحتوى.</p>
+  <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My First HTML Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- This is the main heading --&gt;
+  &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+
+  &lt;!-- This is a paragraph introducing the site --&gt;
+  &lt;p&gt;Hello! I'm learning how to build websites using HTML.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+
+
+    <iframe class="output" srcdoc="<!DOCTYPE html><html lang=&quot;en&quot;><head><meta charset=&quot;UTF-8&quot;><title>My First HTML Page</title></head><body><h1>Welcome to My Website</h1><p>Hello! I'm learning how to build websites using HTML.</p></body></html>"></iframe>
+
+</div>
+
+<div class="lesson">
+  <h2 id="lesson-2">Lesson 2: How Browser Reads HTML?</h2>
+  <p>المتصفح مش بيعرض كود HTML نفسه، هو بيقرأه ويفهم الوسوم، ويعرض المحتوى اللي جواه.</p>
+  <p>مثلًا: لو كتبت وسم الفقرة &lt;p&gt;، المتصفح هيعرض النص فقط.</p>
+  
+  <pre>&lt;!-- This is a paragraph --&gt;
+&lt;p&gt;I love programming!&lt;/p&gt;
+  </pre>
+
+  <!-- Live preview using iframe -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+      <body>
+        <!-- This is a paragraph -->
+        <p>I love programming!</p>
+      </body>
+      </html>
+    " width="100%" height="100" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-3">Lesson 3: First HTML Project</h2>
+  <p>علشان تبدأ أول مشروع:</p>
+  <ol>
+    <li>افتح محرر كود زي VS Code</li>
+    <li>اعمل ملف جديد باسم index.html</li>
+    <li>اكتب الهيكل الأساسي للصفحة</li>
+  </ol>
+  <p>الهيكل الأساسي بيتكوّن من:</p>
+  <ul>
+    <li>الرأس (head): فيه معلومات مخفية</li>
+    <li>الجسم (body): فيه كل المحتوى اللي المستخدم بيشوفه</li>
+  </ul>
+
+  <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Welcome&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;This is my first web page&lt;/h1&gt;
+  &lt;p&gt;I am learning HTML to create websites.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html lang=&quot;en&quot;>
+      <head>
+        <meta charset=&quot;UTF-8&quot;>
+        <title>Welcome</title>
+      </head>
+      <body>
+        <h1>This is my first web page</h1>
+        <p>I am learning HTML to create websites.</p>
+      </body>
+      </html>
+    " width="100%" height="160" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-4">Lesson 4: Page Structure</h2>
+  <p>أي صفحة HTML لازم يكون فيها عناصر أساسية، وكل عنصر ليه وظيفة:</p>
+  <table>
+    <thead>
+      <tr><th>العنصر (الوسم)</th><th>المعنى (وظيفته)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>&lt;!DOCTYPE html&gt;</td><td>بيعرف المتصفح إن الملف ده مكتوب بلغة HTML5</td></tr>
+      <tr><td>&lt;html&gt;</td><td>الجذر الأساسي للصفحة، وكل العناصر بتتكتب جواه</td></tr>
+      <tr><td>&lt;head&gt;</td><td>فيه معلومات بتفيد المتصفح (زي العنوان والروابط)</td></tr>
+      <tr><td>&lt;title&gt;</td><td>بيظهر فوق في تبويب المتصفح</td></tr>
+      <tr><td>&lt;body&gt;</td><td>الجزء اللي بيشوفه المستخدم: عناوين، فقرات، صور، إلخ</td></tr>
+    </tbody>
+  </table>
+
+  <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Page Structure&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Page Content&lt;/h1&gt;
+    &lt;p&gt;This part is inside the body.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>Page Structure</title>
+        </head>
+        <body>
+          <h1>Page Content</h1>
+          <p>This part is inside the body.</p>
+        </body>
+      </html>
+    " width="100%" height="150" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-5">Lesson 5: Comments in HTML</h2>
+  <p>التعليقات بتستخدم لكتابة ملاحظات جوه الكود، المتصفح بيتجاهلها ومش بيعرضها للمستخدم.</p>
+
+  <pre>&lt;!-- This is a comment and will not appear on the page --&gt;
+
+&lt;h2&gt;News&lt;/h2&gt;
+&lt;!-- The section below is for latest news --&gt;
+&lt;p&gt;Elzero released a new HTML lesson!&lt;/p&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <!-- This is a comment and will not appear on the page -->
+          <h2>News</h2>
+          <!-- The section below is for latest news -->
+          <p>Elzero released a new HTML lesson!</p>
+        </body>
+      </html>
+    " width="100%" height="130" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+
+
+<div class="lesson">
+  <h2 id="lesson-6">Lesson 6: Headings</h2>
+  <p>فيه 6 مستويات من العناوين من &lt;h1&gt; (أكبر) إلى &lt;h6&gt; (أصغر). بنستخدمها لترتيب المحتوى.</p>
+
+  <pre>&lt;h1&gt;This is Heading 1&lt;/h1&gt;
+&lt;h2&gt;This is Heading 2&lt;/h2&gt;
+&lt;h3&gt;This is Heading 3&lt;/h3&gt;
+&lt;h4&gt;This is Heading 4&lt;/h4&gt;
+&lt;h5&gt;This is Heading 5&lt;/h5&gt;
+&lt;h6&gt;This is Heading 6&lt;/h6&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <h1>This is Heading 1</h1>
+          <h2>This is Heading 2</h2>
+          <h3>This is Heading 3</h3>
+          <h4>This is Heading 4</h4>
+          <h5>This is Heading 5</h5>
+          <h6>This is Heading 6</h6>
+        </body>
+      </html>
+    " width="100%" height="220" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-7">Lesson 7: Paragraphs</h2>
+  <p>بستخدم وسم &lt;p&gt; علشان تكتب فقرة. كل فقرة لازم تكون محاطة بالوسم ده.</p>
+
+  <pre>&lt;p&gt;This is a paragraph in HTML.&lt;/p&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <p>This is a paragraph in HTML.</p>
+        </body>
+      </html>
+    " width="100%" height="100" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-9">Lesson 9: HTML Attributes</h2>
+  <p>السمات (Attributes) بتدي معلومات إضافية للعنصر زي: <code>id</code>، <code>class</code>، <code>title</code>، <code>href</code>، <code>src</code>.</p>
+
+  <pre>&lt;p title="This is a tooltip"&gt;Hover over me!&lt;/p&gt;
+&lt;a href="https://elzero.org"&gt;Visit Elzero&lt;/a&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <p title=&quot;This is a tooltip&quot;>Hover over me!</p>
+          <a href=&quot;https://elzero.org&quot; target=&quot;_blank&quot;>Visit Elzero</a>
+        </body>
+      </html>
+    " width="100%" height="120" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+
+
+
+<div class="lesson">
+  <h2 id="lesson-10">Lesson 10: Lists</h2>
+  <p>
+    <strong>Unordered List:</strong> &lt;ul&gt; |
+    <strong>Ordered List:</strong> &lt;ol&gt; |
+    كل عنصر: &lt;li&gt;
+  </p>
+
+  <pre>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Step 1&lt;/li&gt;
+  &lt;li&gt;Step 2&lt;/li&gt;
+&lt;/ol&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+          <ol>
+            <li>Step 1</li>
+            <li>Step 2</li>
+          </ol>
+        </body>
+      </html>
+    " width="100%" height="180" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-11">Lesson 11: Links</h2>
+  <p>بستخدم وسم &lt;a&gt; علشان تعمل رابط. السمة <code>href</code> بتحدد مكان الرابط.</p>
+
+  <pre>&lt;a href="https://elzero.org" target="_blank"&gt;Go to Elzero&lt;/a&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <a href=&quot;https://elzero.org&quot; target=&quot;_blank&quot;>Go to Elzero</a>
+        </body>
+      </html>
+    " width="100%" height="100" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-12">Lesson 12: Images</h2>
+  <p>بستخدم وسم &lt;img&gt; وبتحدد مصدر الصورة بـ <code>src</code> والنص البديل بـ <code>alt</code>.</p>
+
+  <pre>&lt;img src="image.jpg" alt="Description of image" width="300"&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <img src=&quot;https://via.placeholder.com/300&quot; alt=&quot;Description of image&quot; width=&quot;300&quot;>
+        </body>
+      </html>
+    " width="100%" height="180" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-13">Lesson 13: Tables</h2>
+  <p>الجداول بتتكون من &lt;table&gt; وفيها &lt;tr&gt; صفوف، &lt;td&gt; خلايا، و &lt;th&gt; رؤوس.</p>
+
+  <pre>&lt;table border="1"&gt;
+  &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Ali&lt;/td&gt;&lt;td&gt;25&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <table border=&quot;1&quot;>
+            <tr><th>Name</th><th>Age</th></tr>
+            <tr><td>Ali</td><td>25</td></tr>
+          </table>
+        </body>
+      </html>
+    " width="100%" height="120" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-14">Lesson 14: Special Characters</h2>
+  <p>بعض الرموز زي &lt; و &gt; لازم نكتبها بطريقة خاصة عشان المتصفح ما يفسرشها ككود.</p>
+
+  <pre>&lt;p&gt;Use &amp;lt; and &amp;gt; to show angle brackets&lt;/p&gt;
+&lt;p&gt;Copyright: &amp;copy; 2025&lt;/p&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <p>Use < and > to show angle brackets</p>
+          <p>Copyright: © 2025</p>
+        </body>
+      </html>
+    " width="100%" height="120" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-15">Lesson 15: Text Formatting</h2>
+  <p>وسوم لتنسيق النصوص مثل &lt;b&gt; (غامق)، &lt;i&gt; (مائل)، &lt;mark&gt; (تحديد)، إلخ.</p>
+
+  <pre>&lt;p&gt;This is &lt;b&gt;bold&lt;/b&gt;, &lt;i&gt;italic&lt;/i&gt;, and &lt;mark&gt;highlighted&lt;/mark&gt;&lt;/p&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <p>This is <b>bold</b>, <i>italic</i>, and <mark>highlighted</mark></p>
+        </body>
+      </html>
+    " width="100%" height="100" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-16">Lesson 16: div and span</h2>
+  <p>
+    &lt;div&gt; عنصر <strong>بلوكي</strong> لتقسيم الصفحة، و &lt;span&gt; عنصر <strong>خطي</strong> لتنسيق جزء من النص.
+  </p>
+
+  <pre>&lt;div&gt;Block section here&lt;/div&gt;
+&lt;p&gt;This is a &lt;span style="color:red"&gt;red&lt;/span&gt; word.&lt;/p&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <div style=&quot;background:#eee; padding:10px; margin-bottom:10px;&quot;>Block section here</div>
+          <p>This is a <span style=&quot;color:red&quot;>red</span> word.</p>
+        </body>
+      </html>
+    " width="100%" height="130" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-17">Lesson 17: Empty Elements</h2>
+  <p>عناصر ملهاش وسم إغلاق زي &lt;br&gt; و &lt;hr&gt; و &lt;img&gt;.</p>
+
+  <pre>&lt;p&gt;Line 1&lt;br&gt;Line 2&lt;/p&gt;
+&lt;hr&gt;
+&lt;img src="https://via.placeholder.com/150" alt="Sample Image"&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <p>Line 1<br>Line 2</p>
+          <hr>
+          <img src=&quot;https://via.placeholder.com/150&quot; alt=&quot;Sample Image&quot;>
+        </body>
+      </html>
+    " width="100%" height="200" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-18">Lesson 18: Button Element</h2>
+  <p>بستخدم وسم &lt;button&gt; لإنشاء زر ضغط.</p>
+
+  <pre>&lt;button&gt;Click Me&lt;/button&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <button onclick=&quot;alert(&quot;Button clicked!&quot;)&quot;>Click Me</button>
+        </body>
+      </html>
+    " width="100%" height="100" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-19">Lesson 19: HTML Comments</h2>
+  <p>بنستخدم &lt;!-- Comment --&gt; علشان نكتب ملاحظات لا تظهر للمستخدم في المتصفح.</p>
+
+  <pre>&lt;!-- This is a comment and will not appear --&gt;
+&lt;h2&gt;News&lt;/h2&gt;
+&lt;p&gt;Elzero released a new HTML lesson!&lt;/p&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <!-- This is a comment and will not appear -->
+          <h2>News</h2>
+          <p>Elzero released a new HTML lesson!</p>
+        </body>
+      </html>
+    " width="100%" height="120" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-20">Lesson 20: Full Review</h2>
+  <p>صفحة مراجعة بتجمع كل اللي اتعلمناه من عناصر أساسية في HTML.</p>
+
+  <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Review Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome&lt;/h1&gt;
+    &lt;p&gt;This is a &lt;b&gt;review&lt;/b&gt; of HTML basics.&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;ul&gt;&lt;li&gt;HTML&lt;/li&gt;&lt;/ul&gt;
+    &lt;a href="#"&gt;Link&lt;/a&gt;
+    &lt;br&gt;
+    &lt;img src="img.jpg" alt="Sample"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>Review Page</title>
+        </head>
+        <body>
+          <h1>Welcome</h1>
+          <p>This is a <b>review</b> of HTML basics.</p>
+          <hr>
+          <ul><li>HTML</li></ul>
+          <a href=&quot;#&quot;>Link</a>
+          <br>
+          <img src=&quot;https://via.placeholder.com/150&quot; alt=&quot;Sample&quot;>
+        </body>
+      </html>
+    " width="100%" height="250" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+<div class="lesson">
+  <h2 id="lesson-21">Lesson 21: Nested Elements</h2>
+  <p>تقدر تكتب وسوم داخل وسوم تانية، زي إنك تكتب &lt;b&gt; أو &lt;i&gt; جوه &lt;p&gt;.</p>
+
+  <pre>&lt;p&gt;This is a &lt;b&gt;bold&lt;/b&gt; and &lt;i&gt;italic&lt;/i&gt; word.&lt;/p&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <p>This is a <b>bold</b> and <i>italic</i> word.</p>
+        </body>
+      </html>
+    " width="100%" height="100" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-22">Lesson 22: Code Indentation</h2>
+  <p>من الأفضل تنظم الكود بمسافات وتعمل مسافات بادئة (Indentation) علشان الكود يكون مقروء وسهل الفهم.</p>
+
+  <pre>&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+          </ul>
+        </body>
+      </html>
+    " width="100%" height="100" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-23">Lesson 23: Internal &amp; External Links</h2>
+  <p>الرابط الخارجي بيربطك بصفحة خارج موقعك، والداخلي بيربطك بصفحة داخل نفس الموقع.</p>
+
+  <pre>&lt;a href="https://google.com" target="_blank"&gt;External Link&lt;/a&gt;
+&lt;br&gt;
+&lt;a href="about.html"&gt;Internal Link&lt;/a&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <a href=&quot;https://google.com&quot; target=&quot;_blank&quot;>External Link</a>
+          <br>
+          <a href=&quot;about.html&quot;>Internal Link</a>
+        </body>
+      </html>
+    " width="100%" height="100" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-24">Lesson 24: Mail &amp; Phone Links</h2>
+  <p>ممكن تعمل رابط يفتح برنامج البريد لإرسال رسالة، أو يتصل برقم تليفون مباشرة عند الضغط.</p>
+
+  <pre>&lt;a href="mailto:example@email.com"&gt;Send Email&lt;/a&gt;
+&lt;br&gt;
+&lt;a href="tel:+201234567890"&gt;Call Now&lt;/a&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <a href=&quot;mailto:example@email.com&quot;>Send Email</a>
+          <br>
+          <a href=&quot;tel:+201234567890&quot;>Call Now</a>
+        </body>
+      </html>
+    " width="100%" height="100" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+<div class="lesson">
+  <h2 id="lesson-25">Lesson 25: Image as Link</h2>
+  <p>ممكن تحط صورة جوا رابط، بحيث لما المستخدم يضغط على الصورة، تفتح صفحة معينة.</p>
+
+  <pre>&lt;a href="https://elzero.org"&gt;
+  &lt;img src="logo.png" alt="Elzero Logo"&gt;
+&lt;/a&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <a href=&quot;https://elzero.org&quot; target=&quot;_blank&quot;>
+            <img src=&quot;https://via.placeholder.com/150&quot; alt=&quot;Elzero Logo&quot;>
+          </a>
+        </body>
+      </html>
+    " width="100%" height="180" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-26">Lesson 26: Button Inside Link</h2>
+  <p>ممكن تحط زر داخل رابط علشان تعطي شكل زر لرابط، لكن لازم تستخدمه بحذر علشان يكون متوافق مع المعايير.</p>
+
+  <pre>&lt;a href="https://elzero.org"&gt;
+  &lt;button&gt;Visit Elzero&lt;/button&gt;
+&lt;/a&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <a href=&quot;https://elzero.org&quot; target=&quot;_blank&quot;>
+            <button>Visit Elzero</button>
+          </a>
+        </body>
+      </html>
+    " width="100%" height="120" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-27">Lesson 27: Image Width &amp; Height</h2>
+  <p>تقدر تتحكم في عرض وارتفاع الصورة باستخدام السمات <code>width</code> و<code>height</code>.</p>
+
+  <pre>&lt;img src="photo.jpg" width="200" height="150" alt="A photo"&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <img src=&quot;https://via.placeholder.com/200x150&quot; width=&quot;200&quot; height=&quot;150&quot; alt=&quot;A photo&quot;>
+        </body>
+      </html>
+    " width="100%" height="180" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-28">Lesson 28: Images from Internet</h2>
+  <p>تقدر تعرض صورة مباشرة من الإنترنت باستخدام رابط مباشر للصورة في السمة <code>src</code>.</p>
+
+  <pre>&lt;img src="https://via.placeholder.com/150" alt="Placeholder Image"&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <img src=&quot;https://via.placeholder.com/150&quot; alt=&quot;Placeholder Image&quot;>
+        </body>
+      </html>
+    " width="100%" height="160" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-29">Lesson 29: Image Alt Text</h2>
+  <p>النص البديل <code>alt</code> بيظهر لما الصورة متقدرش تتحمّل، وكمان بيساعد الأشخاص اللي بيستخدموا قارئات الشاشة.</p>
+
+  <pre>&lt;img src="invalid.jpg" alt="Image not found"&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <img src=&quot;invalid.jpg&quot; alt=&quot;Image not found&quot;>
+        </body>
+      </html>
+    " width="100%" height="100" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-30">Lesson 30: HTML Entities</h2>
+  <p>بعض الرموز في HTML لها استخدامات خاصة زي &lt; و &gt;، فلازم نكتبها باستخدام كيانات HTML علشان تظهر كرموز عادية.</p>
+
+  <pre>&lt;p&gt;Trademark: &amp;trade; | Registered: &amp;reg;&lt;/p&gt;
+&lt;p&gt;Use &amp;lt; and &amp;gt; to show angle brackets&lt;/p&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <p>Trademark: ™ | Registered: ®</p>
+          <p>Use < and > to show angle brackets</p>
+        </body>
+      </html>
+    " width="100%" height="120" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+<div class="lesson">
+  <h2 id="lesson-31">Lesson 31: HTML Video</h2>
+  <p>تقدر تستخدم وسم <code>&lt;video&gt;</code> لعرض فيديو داخل الصفحة، مع خصائص زي <code>controls</code> و<code>autoplay</code> و<code>loop</code>.</p>
+
+  <pre>&lt;video width="320" height="240" controls&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <video width=&quot;320&quot; height=&quot;240&quot; controls>
+            <source src=&quot;https://www.w3schools.com/html/mov_bbb.mp4&quot; type=&quot;video/mp4&quot;>
+            Your browser does not support the video tag.
+          </video>
+        </body>
+      </html>
+    " width="100%" height="280" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-32">Lesson 32: HTML Audio</h2>
+  <p>وسم <code>&lt;audio&gt;</code> بيتيح لك تشغيل ملفات صوتية على موقعك، وتقدر تضيف له خصائص زي <code>controls</code> و<code>autoplay</code>.</p>
+
+  <pre>&lt;audio controls&gt;
+  &lt;source src="sound.mp3" type="audio/mpeg"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <audio controls>
+            <source src=&quot;https://www.w3schools.com/html/horse.mp3&quot; type=&quot;audio/mpeg&quot;>
+            Your browser does not support the audio element.
+          </audio>
+        </body>
+      </html>
+    " width="100%" height="100" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-33">Lesson 33: iframe</h2>
+  <p>وسم <code>&lt;iframe&gt;</code> بيستخدم لعرض محتوى خارجي داخل صفحتك زي صفحة ويب تانية أو فيديو من YouTube.</p>
+
+  <pre>&lt;iframe src="https://elzero.org" width="400" height="300"&gt;&lt;/iframe&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <iframe src=&quot;https://elzero.org&quot; width=&quot;100%&quot; height=&quot;300&quot;></iframe>
+        </body>
+      </html>
+    " width="100%" height="320" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-34">Lesson 34: HTML Forms</h2>
+  <p>بنستخدم وسم <code>&lt;form&gt;</code> لجمع بيانات من المستخدم زي الاسم والإيميل، ووسوم <code>&lt;input&gt;</code> و<code>&lt;label&gt;</code> وغيرها لعرض الحقول.</p>
+
+  <pre>&lt;form&gt;
+  &lt;label&gt;Name:&lt;/label&gt;
+  &lt;input type="text" name="username"&gt;
+  &lt;br&gt;
+  &lt;input type="submit" value="Send"&gt;
+&lt;/form&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <form>
+            <label>Name:</label>
+            <input type=&quot;text&quot; name=&quot;username&quot;>
+            <br>
+            <input type=&quot;submit&quot; value=&quot;Send&quot;>
+          </form>
+        </body>
+      </html>
+    " width="100%" height="140" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-35">Lesson 35: Input Types</h2>
+  <p>وسم <code>&lt;input&gt;</code> ليه أنواع كتير. كل نوع بيحدد طريقة إدخال مختلفة زي: <code>text</code>، <code>email</code>، <code>password</code>، <code>number</code>، إلخ.</p>
+
+  <pre>&lt;input type="email" name="useremail" placeholder="Enter your email"&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <input type=&quot;email&quot; name=&quot;useremail&quot; placeholder=&quot;Enter your email&quot;>
+        </body>
+      </html>
+    " width="100%" height="80" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-36">Lesson 36: Radio &amp; Checkbox</h2>
+  <p>
+    نستخدم <code>type="radio"</code> لاختيار عنصر واحد من مجموعة، و<code>type="checkbox"</code> لاختيار عناصر متعددة.
+  </p>
+
+  <pre>&lt;input type="radio" name="gender" value="male"&gt; Male
+&lt;input type="radio" name="gender" value="female"&gt; Female
+&lt;br&gt;
+&lt;input type="checkbox" name="skills" value="html"&gt; HTML
+&lt;input type="checkbox" name="skills" value="css"&gt; CSS
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <p>Select Gender:</p>
+          <input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;male&quot;> Male
+          <input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;female&quot;> Female
+          <br><br>
+          <p>Select Skills:</p>
+          <input type=&quot;checkbox&quot; name=&quot;skills&quot; value=&quot;html&quot;> HTML
+          <input type=&quot;checkbox&quot; name=&quot;skills&quot; value=&quot;css&quot;> CSS
+        </body>
+      </html>
+    " width="100%" height="160" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-37">Lesson 37: Select Menu</h2>
+  <p>نستخدم وسم <code>&lt;select&gt;</code> لعرض قائمة منسدلة، ووسم <code>&lt;option&gt;</code> لتمثيل العناصر داخلها.</p>
+
+  <pre>&lt;select name="country"&gt;
+  &lt;option value="eg"&gt;Egypt&lt;/option&gt;
+  &lt;option value="sa"&gt;Saudi Arabia&lt;/option&gt;
+&lt;/select&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <label for=&quot;country&quot;>Choose your country:</label>
+          <select name=&quot;country&quot; id=&quot;country&quot;>
+            <option value=&quot;eg&quot;>Egypt</option>
+            <option value=&quot;sa&quot;>Saudi Arabia</option>
+          </select>
+        </body>
+      </html>
+    " width="100%" height="100" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-38">Lesson 38: Textarea</h2>
+  <p>وسم <code>&lt;textarea&gt;</code> بيُستخدم لما تحتاج من المستخدم يكتب نص طويل زي ملاحظات أو رسالة.</p>
+
+  <pre>&lt;textarea name="message" rows="4" cols="30"&gt;&lt;/textarea&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <label for=&quot;message&quot;>Your Message:</label><br>
+          <textarea name=&quot;message&quot; id=&quot;message&quot; rows=&quot;4&quot; cols=&quot;30&quot;></textarea>
+        </body>
+      </html>
+    " width="100%" height="130" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-39">Lesson 39: HTML5 Semantic Tags</h2>
+  <p>
+    HTML5 قدمت عناصر دلالية (Semantic) بتوضح وظيفة كل جزء في الصفحة، وبتساعد محركات البحث والقارئات.
+    أهم الوسوم: <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, إلخ.
+  </p>
+
+  <pre>&lt;header&gt;
+  &lt;h1&gt;Site Title&lt;/h1&gt;
+&lt;/header&gt;
+&lt;section&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Post Title&lt;/h2&gt;
+    &lt;p&gt;Content...&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/section&gt;
+&lt;footer&gt;
+  &lt;p&gt;All rights reserved.&lt;/p&gt;
+&lt;/footer&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <header style=&quot;background:#eee; padding:10px;&quot;>
+            <h1>Site Title</h1>
+          </header>
+          <section style=&quot;padding:10px;&quot;>
+            <article>
+              <h2>Post Title</h2>
+              <p>Content...</p>
+            </article>
+          </section>
+          <footer style=&quot;background:#eee; padding:10px;&quot;>
+            <p>All rights reserved.</p>
+          </footer>
+        </body>
+      </html>
+    " width="100%" height="220" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+<div class="lesson">
+  <h2 id="lesson-40">Lesson 40: End of Part One</h2>
+  <p>
+    مبروك! وصلت لنهاية الجزء الأول من تعلم HTML. دلوقتي بقي عندك أساس قوي في هيكلة صفحات الويب، وده هيساعدك تكمل باقي الرحلة في تصميم المواقع.
+  </p>
+
+  <pre>&lt;h1&gt;Thanks for learning!&lt;/h1&gt;
+&lt;p&gt;You completed the HTML beginner series.&lt;/p&gt;
+  </pre>
+
+  <!-- Live Preview -->
+  <iframe srcdoc="
+      <!DOCTYPE html>
+      <html>
+        <body>
+          <h1>Thanks for learning!</h1>
+          <p>You completed the HTML beginner series.</p>
+        </body>
+      </html>
+    " width="100%" height="120" style="border:1px solid #ccc; border-radius:8px; margin-top:15px;">
+  </iframe>
+</div>
+
+
+</body></html>
